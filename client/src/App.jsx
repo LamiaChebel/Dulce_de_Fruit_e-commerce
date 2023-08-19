@@ -1,8 +1,9 @@
+import Template from "./layouts/E-commerce/Template";
 
 function App() {
   return (
     <>
-    
+      <Template />
     </>
   );
 }

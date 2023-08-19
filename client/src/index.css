@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/***********************************CSS Global**********************************/
+
+/* VARIABLES */
+:root {
+  --color-primary: #50006c;
+  --color-secundary: #f5e8da;
+  --color-bcg: #f2f2f2;
+  --color-text: #4d4d4d;
+  --color-cta:  #6a0924;
+  --font-title: 'Poppins', sans-serif;
+  --font-text: 'Inter', sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--font-text);
+  color: var(--color-text);
+  background-color: var(--color-bcg);
+}
