@@ -1,0 +1,9 @@
+nav {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+ul {
+    background-color: var(--color-cta-menu);
+}
