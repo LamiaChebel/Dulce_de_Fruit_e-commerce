@@ -45,6 +45,15 @@ body {
   line-height: 1.5;
 }
 
+/*  Header et Footer */
+
+header, footer {
+  background-color: var(--color-primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Liens */
 
 a {
@@ -53,4 +62,8 @@ a {
 
 a:hover {
   color: var(--color-cta-menu);
+}
+
+a:visited {
+  color: var(--color-text);
 }
