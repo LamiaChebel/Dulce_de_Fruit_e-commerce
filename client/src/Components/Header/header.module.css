@@ -29,7 +29,12 @@ div .hidden {
     padding: 1rem 1rem 0;
 }
 
-/* Formulaire de recharche */
+.banner a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+/* Formulaire de recherche */
 form {
     display: flex;
     justify-content: center;
@@ -65,7 +70,7 @@ button {
           transform: translate3d(0,0,0);      /* position initiale à droite */
         }
         100% {
-          transform: translate3d(-100%,0,0);  /* position finale à gauche */
+          transform: translate3d(100%,0,0);  /* position finale à gauche */
         }
       }
     
@@ -75,11 +80,16 @@ button {
         display: block;
         background-color: var(--color-cta);
         color: var(--color-secondary);
-        text-align: center;
     }
 
     .bannerTxt {
-        animation: defilement 15s infinite linear; /* défilement linéaire de droite à gauche */
+        display: block;
+        white-space: nowrap;
+        -webkit-animation:linear defilement 20s infinite ;
+        -moz-animation:linear defilement 20s infinite ;
+        -o-animation:linear defilement 20s infinite ;
+        -ms-animation:linear defilement 20s infinite ;
+        animation: defilement 20s infinite linear; /*défilement linéaire de droite à gauche */
     }
 
     /* h1 + icônes */

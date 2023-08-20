@@ -1,0 +1,34 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* Slider */
+
+.slider {
+  margin: 3rem 0;
+}
+
+.sliderNav {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  .sliderNavBtn {
+    border: none;
+    padding: 0 0.5rem;
+  }
+  
+  .sliderNavBtn:hover {
+    opacity: 0.5;
+  }
+
+  .navIcon1 {
+
+  }
+  

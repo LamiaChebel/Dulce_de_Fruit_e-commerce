@@ -15,7 +15,7 @@ function Header() {
     return (
         <header>
             <div role="banner" className={style.hidden}>
-                <p className={style.bannerTxt}>Livraison offerte &aacute; partir de 50€ d'achat</p>
+                <p className={style.bannerTxt}>Livraison offerte &agrave; partir de 50&euro; d'achat</p>
             </div>
             <section className={style.banner}>
 
