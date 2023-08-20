@@ -14,22 +14,32 @@ import style from "./header.module.css";
 function Header() {
     return (
         <header>
-            {/* Logo de l'entreprise */}
-            <Link to={"/"}>
+            <div role="banner" className={style.hidden}>
+                <p className={style.bannerTxt}>Livraison offerte à partir de 50€ d'achat</p>
+            </div>
+            <section className={style.banner}>
+
+                {/* Logo de l'entreprise */}
                 <h1 className={style.logo}>
-                    <img src={logo} alt="logo de Dulce de Fruit qui redirige vers la page d'accueil" />
+                    <Link to={"/"}>
+                        <img src={logo} alt="logo de Dulce de Fruit qui redirige vers la page d'accueil" />
+                    </Link>
                 </h1>
-            </Link>
 
-            {/* Authentification */}
-            <Link to={"/connexion"} className={style.connexion}>
-                <FontAwesomeIcon icon={faCircleUser} className={style.userIcon} aria-hidden="true" />
-            </Link>
 
-            {/* Panier */}
-            <Link to={"/cart"} className={style.cart}>
-                <FontAwesomeIcon icon={faBagShopping} className={style.cartIcon} aria-hidden="true" />
-            </Link>
+                {/* Authentification */}
+                <Link to={"/connexion"} className={style.connexion} title="Identifiez-vous ou enregistrez-vous">
+                    <FontAwesomeIcon icon={faCircleUser} className={style.userIcon} aria-hidden="true" />
+                    Connexion
+                </Link>
+
+                {/* Panier */}
+                <Link to={"/cart"} className={style.cart} title="Voir mon panier">
+                    <FontAwesomeIcon icon={faBagShopping} className={style.cartIcon} aria-hidden="true" />
+                   Panier
+                </Link>
+
+            </section>
 
             {/* Barre de recherche */}
             <form action="" method="get" id="searchShop">
@@ -43,7 +53,7 @@ function Header() {
 
             {/* Menu de navigation principal */}
             <Nav />
-            
+
         </header>
     )
 }

@@ -20,7 +20,7 @@ code {
   --color-secondary: #f5e8da;
   --color-bcg: #f2f2f2;
   --color-text: #4d4d4d;
-  --color-cta:  #6a0924;
+  --color-cta: #6a0924;
   --color-cta-menu: #d4deb7;
   --font-title: 'Poppins', sans-serif;
   --font-text: 'Inter', sans-serif;
@@ -42,4 +42,15 @@ body {
   font-family: var(--font-text);
   color: var(--color-text);
   background-color: var(--color-bcg);
+  line-height: 1.5;
+}
+
+/* Liens */
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-cta-menu);
 }
