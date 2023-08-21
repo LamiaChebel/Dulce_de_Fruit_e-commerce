@@ -15,12 +15,12 @@ class Query{
     }
 
     static async write(query, data){
-        const result = await pool.execute(query, [...Object.values(data)]);
+        const [result] = await pool.execute(query, [...Object.values(data)]);
         return result;
     }
 
-    static async remove(query, id){
-        const result = await pool.execute(query, [id]);
+    static async remove(query, value){
+        const [result] = await pool.execute(query, [value]);
         return result;
     }
 
