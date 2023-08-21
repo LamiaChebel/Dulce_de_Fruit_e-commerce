@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "création d'une API pour un site e-commerce de vente de préparations de fruits pour l'entreprise Dulce de Fruit",
   "main": "./src/server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server.js",

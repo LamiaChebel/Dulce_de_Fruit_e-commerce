@@ -6,7 +6,7 @@
 aside .icons,
 .footerCtn h4,
 .menu a,
-legend,
+.legendFooter,
 .footerTxt {
     color: var(--color-secondary);
 }
@@ -16,8 +16,8 @@ legend,
     padding: 1.5rem;
 }
 
-legend,
-input[type=submit],
+.legendFooter,
+.subscribe,
 .paymentInfo,
 .footerTxt {
     text-align: center;
@@ -40,7 +40,7 @@ aside .icons {
 
 /* Formulaire newsletter */
 
-fieldset {
+.formFooter {
     border: none;
     display: flex;
     flex-direction: column;
@@ -48,23 +48,24 @@ fieldset {
     justify-items: center;
 }
 
-legend {
+.legendFooter {
     margin: 1rem;
     border-bottom: 0.1rem solid var(--color-secondary);
 }
 
-label {
+.formFooter label {
     display: none;
 }
 
-input {
+.formFooter input {
     border-radius: 0%;
     padding: 1rem;
 }
 
-input[type=submit] {
+.formFooter input[type=submit] {
     width: 10rem;
     align-self: center;
+    color: var(--color-cta);
 
 }
 

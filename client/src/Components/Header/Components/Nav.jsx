@@ -18,7 +18,7 @@ function Nav() {
             </div>
             {/* Première version du menu principal */}
             <div className={style.desktopNav}>
-                <NavLink to={"/accueil"}>accueil</NavLink>
+                <NavLink to={"/"}>accueil</NavLink>
                 <NavLink to={"/notre-boutique"}>notre boutique</NavLink>
                 <NavLink to={"/nos-recettes"}>nos recettes</NavLink>
                 <NavLink to={"/dulce-de-fruit"}>dulce de fruit</NavLink>

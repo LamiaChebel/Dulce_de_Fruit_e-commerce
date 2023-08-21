@@ -50,11 +50,20 @@ function Slider() {
             </figure>
 
             <nav className={style.sliderNavOnImg}>
-                <button rel="prev" className={style.navBtn} aria-label="Preview" onClick={sliderHandlerPrev}>
-                    <FontAwesomeIcon icon={faCircleChevronLeft} className={style.navOnImg} aria-hidden="true" />
+                <button rel="prev"
+                    className={style.navBtn}
+                    aria-label="Preview"
+                    onClick={sliderHandlerPrev}>
+                    <FontAwesomeIcon icon={faCircleChevronLeft}
+                        className={style.navOnImg}
+                        aria-hidden="true" />
                 </button>
-                <button rel="prev" className={style.navBtn} aria-label="Next" onClick={sliderHandlerNext}>
-                    <FontAwesomeIcon icon={faCircleChevronRight} className={style.navOnImg} aria-hidden="true" />
+                <button rel="prev" className={style.navBtn}
+                    aria-label="Next"
+                    onClick={sliderHandlerNext}>
+                    <FontAwesomeIcon icon={faCircleChevronRight}
+                        className={style.navOnImg}
+                        aria-hidden="true" />
                 </button>
             </nav>
 
@@ -62,8 +71,12 @@ function Slider() {
                 <button rel="prev" className={style.navBtn} aria-label="Preview" onClick={sliderHandlerPrev}>
                     <FontAwesomeIcon icon={faCircle} className={style.navIcon} aria-hidden="true" />
                 </button>
-                <button rel="prev" className={style.navBtn} aria-label="Next" onClick={sliderHandlerNext}>
-                    <FontAwesomeIcon icon={faCircle} className={style.navIcon} aria-hidden="true" />
+                <button rel="prev" className={style.navBtn}
+                    aria-label="Next"
+                    onClick={sliderHandlerNext}>
+                    <FontAwesomeIcon icon={faCircle}
+                        className={style.navIcon}
+                        aria-hidden="true" />
                 </button>
             </nav>
 

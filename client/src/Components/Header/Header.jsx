@@ -28,25 +28,45 @@ function Header() {
 
 
                 {/* Authentification */}
-                <Link to={"/connexion"} className={style.connexion} title="Identifiez-vous ou enregistrez-vous">
-                    <FontAwesomeIcon icon={faCircleUser} className={style.userIcon} aria-hidden="true" />
+                <Link to={"/connexion"}
+                    className={style.connexion}
+                    title="Identifiez-vous !">
+                    <FontAwesomeIcon icon={faCircleUser}
+                        className={style.userIcon}
+                        aria-hidden="true" />
                     Connexion
                 </Link>
 
                 {/* Panier */}
-                <Link to={"/cart"} className={style.cart} title="Voir mon panier">
-                    <FontAwesomeIcon icon={faBagShopping} className={style.cartIcon} aria-hidden="true" />
-                   Panier
+                <Link to={"/cart"}
+                    className={style.cart}
+                    title="Voir mon panier">
+                    <FontAwesomeIcon icon={faBagShopping}
+                        className={style.cartIcon}
+                        aria-hidden="true" />
+                    Panier
                 </Link>
 
             </section>
 
             {/* Barre de recherche */}
-            <form action="" method="get" id="searchShop">
+            <form action=""
+                method="get"
+                id="searchShop"
+                className={style.formSearch}>
 
-                <input type="text" name="searchShop" id="searchShop" placeholder="Rechercher" aria-label="rechercher en entrant des mots-clés" />
-                <button type="submit" value="search"  className={style.submit} aria-label="search">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className={style.searchIcon} aria-hidden="true" />
+                <input type="text"
+                    name="searchShop"
+                    id="searchShop"
+                    placeholder="Rechercher"
+                    aria-label="recherche par mots-clés" />
+                <button type="submit"
+                    value="search"
+                    className={style.submitHeader}
+                    aria-label="search">
+                    <FontAwesomeIcon icon={faMagnifyingGlass}
+                        className={style.searchIcon}
+                        aria-hidden="true" />
                 </button>
 
             </form>

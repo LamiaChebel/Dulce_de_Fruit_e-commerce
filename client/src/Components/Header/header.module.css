@@ -1,8 +1,8 @@
-h1 {
+.logo {
     width: 18rem;
 }
 
-img {
+.logo img {
     display: block;
     width: 100%;
     margin: 0 1rem 1rem 0;
@@ -35,7 +35,7 @@ div .hidden {
 }
 
 /* Formulaire de recherche */
-form {
+.formSearch {
     display: flex;
     justify-content: center;
     padding: 0 1rem 2rem;
@@ -52,7 +52,7 @@ input {
     text-align: left;
 }
 
-button .submit {
+.submitHeader {
     position: absolute;
     top: 2.2rem;
     right: 7rem;

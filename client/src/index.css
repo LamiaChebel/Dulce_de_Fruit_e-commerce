@@ -64,6 +64,6 @@ a:hover {
   color: var(--color-cta-menu);
 }
 
-a:visited {
+/* a:visited {
   color: var(--color-text);
-}
+} */
