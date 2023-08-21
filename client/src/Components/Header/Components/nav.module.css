@@ -1,10 +1,10 @@
-nav {
+.navHeader {
     background-color: var(--color-secondary);
     color: var(--color-primary);
 }
 
-nav a,
-nav p {
+.navHeader a,
+.navHeader p {
     display: block;
     padding: 1.6rem;
     text-align: center;
@@ -20,11 +20,11 @@ p {
 
 @media screen and (min-width: 768px) {
 
-    nav a {
+    .navHeader a {
         display: inline-block;
     }
 
-    nav p {
+    .navHeader p {
         display: none;
     }
     .desktopNav {

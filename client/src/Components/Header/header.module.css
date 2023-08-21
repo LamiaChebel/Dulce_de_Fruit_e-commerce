@@ -52,7 +52,7 @@ input {
     text-align: left;
 }
 
-button {
+button .submit {
     position: absolute;
     top: 2.2rem;
     right: 7rem;

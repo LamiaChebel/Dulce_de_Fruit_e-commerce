@@ -8,7 +8,7 @@ import style from "./nav.module.css";
 
 function Nav() {
     return (
-        <nav>
+        <nav className={style.navHeader}>
             {/* Bannière Menu avec icône hamburger */}
             <div>
                 <p className={style.menuTxt}>menu</p>

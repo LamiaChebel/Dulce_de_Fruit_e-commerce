@@ -12,23 +12,93 @@ img {
 }
 
 .sliderNav {
-    display: flex;
-    justify-items: center;
-    text-align: center;
-    margin-top: 1rem;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.navBtn {
+  border-radius: 50%;
+  border: none;
+  margin: 0.5rem;
+
+}
+
+.navBtn:hover,
+.navOnImg:hover {
+  opacity: 0.5;
+}
+
+.navIcon,
+.navOnImg {
+  color: var(--color-cta);
+}
+
+.navOnImg {
+  font-size: 5rem;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sliderNavOnImg {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Bandeau icônes d'informations */
+
+.infosIcons, .info {
+  color: var(--color-cta);
+  text-align: center;
+}
+
+.infosIcons {
+  font-size: 2.5rem;
+}
+
+.info {
+  background-color: var(--color-secondary);
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info dl {
+  width: 50%;
+  padding: 1rem 0;
+
+}
+
+.info dd {
+  padding: 0.5rem 0;
+}
+
+
+/*  Mode Desktop */
+@media screen and (min-width: 768px) {
+
+  .slider {
+    max-width: 70%;
+    margin: 3rem auto;
   }
 
-  .sliderNavBtn {
-    border: none;
-    padding: 0 0.5rem;
-  }
-  
-  .sliderNavBtn:hover {
-    opacity: 0.5;
+  .info {
+    justify-content:stretch;
   }
 
-  .navIcon1 {
-
+  .info dl {
+    width : 16%;
+    justify-content: center;
   }
-  
+
+}

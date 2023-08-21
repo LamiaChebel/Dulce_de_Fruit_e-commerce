@@ -45,7 +45,7 @@ function Header() {
             <form action="" method="get" id="searchShop">
 
                 <input type="text" name="searchShop" id="searchShop" placeholder="Rechercher" aria-label="rechercher en entrant des mots-clés" />
-                <button type="submit" value="search" aria-label="search">
+                <button type="submit" value="search"  className={style.submit} aria-label="search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className={style.searchIcon} aria-hidden="true" />
                 </button>
 
