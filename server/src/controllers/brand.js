@@ -31,10 +31,10 @@ export const one = async (req, res) => {
             const msg = "This brand doesn't exist in the database";
             res.status(200).json(success(msg));
         } else {
-            const msg = "Display of the brand " + brand.title;
+            const msg = "Display of the brand " + brand[0].title;
             res.status(200).json(success(msg, brand));
         }
-    } catch (err) {
+    } catch (error) {
         res.status(500).json(error);
         throw Error(err);
     }
@@ -52,42 +52,44 @@ export const addBrand = async (req, res) => {
             res.status(201).json(success(msg));
         } else throw Error("Not added brand because syntax error in the object.");
 
-    } catch (err) {
-        throw Error(err);
+    } catch (error) {
+        throw Error(error);
     }
 }
 
 // Pour modifier le nom de la marque
 
 export const update = async (req, res) => {
+    const {title} = req.body;
+
     try {
 
-        const query = "UPDATE brand SET title = ? WHERE id = ?";
-        const [result] = await Query.write(query, [req.body, req.params.id]);
+        const query = "UPDATE brand SET brand.title = ? WHERE brand.id = ?";
+        const [result] = await Query.write(query, [title, req.params.id]);
 
         if (result.affectedRows) {
             const msg = `Modified brand : ${result.info}`;
-            res.statuscode(200).json(success(msg));
+            res.status(200).json(success(msg));
 
         } else throw Error(`Not modified brand because can't find the brand with an ${req.params.id}`);
 
-    } catch (err) {
-        throw Error(err);
+    } catch (error) {
+        throw Error(error);
     }
 }
 
 export const remove = async (req, res) => {
     try {
         const query = "DELETE FROM brand WHERE id = ?";
-        const result = await Query.remove(query, req.body.id);
+        const result = await Query.remove(query, [req.params.id]);
 
         if (result.affectedRows) {
             const msg = "Removed brand";
             res.status(200).json(success(msg));
 
-        } else throw Error(`Can't find the tea with an ID ${req.params.id}`);
+        } else throw Error(`Can't find the brand with an ID ${req.params.id}`);
 
-    } catch (err) {
-        throw Error(err);
+    } catch (error) {
+        throw Error(error);
     }
 }
