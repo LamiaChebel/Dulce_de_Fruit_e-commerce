@@ -1,10 +1,13 @@
 import React from "react";
-import { Routes, Route, useParams } from "react-router-dom";
 
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
 
-import Home from "../../Pages/Home/Home";
+import Header from "../../Components/Header/Header.jsx";
+import Footer from "../../Components/Footer/Footer.jsx";
+
+import ErrorPage from "../../Pages/Error/ErrorPage.jsx";
+
+import Home from "../../Pages/Home/Home.jsx";
 
 function Template() {
     return (
@@ -12,6 +15,9 @@ function Template() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+
+                <Route path="*" element={<ErrorPage />} />
+
             </Routes>
             <Footer />
         </>

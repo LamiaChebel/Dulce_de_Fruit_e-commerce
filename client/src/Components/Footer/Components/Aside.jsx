@@ -1,4 +1,7 @@
+import React from "react";
+
 import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faTiktok, faPinterest } from '@fortawesome/free-brands-svg-icons';
 

@@ -1,9 +1,9 @@
 import React from "react";
 
-import Aside from "./Components/Aside";
-import Form from "./Components/Form";
-import Navbar from "./Components/Navbar";
-import Payment from "./Components/Payment";
+import Aside from "./Components/Aside.jsx";
+import Form from "./Components/Form.jsx";
+import Navbar from "./Components/Navbar.jsx";
+import Payment from "./Components/Payment.jsx";
 
 import style from "./footer.module.css";
 

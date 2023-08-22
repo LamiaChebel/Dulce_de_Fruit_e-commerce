@@ -1,6 +1,7 @@
 import React from "react";
-import Slider from "./Components/Slider";
-import Infos from "./Components/Infos";
+
+import Slider from "./Components/Slider.jsx";
+import Infos from "./Components/Infos.jsx";
 
 import style from "./home.module.css";
 

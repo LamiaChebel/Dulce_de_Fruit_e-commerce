@@ -47,11 +47,22 @@ body {
 
 /*  Header et Footer */
 
-header, footer {
+header,
+footer {
   background-color: var(--color-primary);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Titres */
+
+h1,
+h2::not(.errorTitle),
+h3,
+h4 {
+  color: var(--color-cta);
+  font-family: var(--font-title);
 }
 
 /* Liens */
@@ -64,6 +75,3 @@ a:hover {
   color: var(--color-cta-menu);
 }
 
-/* a:visited {
-  color: var(--color-text);
-} */

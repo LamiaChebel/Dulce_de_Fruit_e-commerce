@@ -1,7 +1,8 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
-import Nav from "./Components/Nav";
+import Nav from "./Components/Nav.jsx";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
@@ -14,6 +15,7 @@ import style from "./header.module.css";
 function Header() {
     return (
         <header>
+            {/* Bandeau défilant */}
             <div role="banner" className={style.hidden}>
                 <p className={style.bannerTxt}>Livraison offerte &agrave; partir de 50&euro; d'achat</p>
             </div>
@@ -28,7 +30,7 @@ function Header() {
 
 
                 {/* Authentification */}
-                <Link to={"/connexion"}
+                <Link to={"connexion"}
                     className={style.connexion}
                     title="Identifiez-vous !">
                     <FontAwesomeIcon icon={faCircleUser}
@@ -38,7 +40,7 @@ function Header() {
                 </Link>
 
                 {/* Panier */}
-                <Link to={"/cart"}
+                <Link to={"cart"}
                     className={style.cart}
                     title="Voir mon panier">
                     <FontAwesomeIcon icon={faBagShopping}
@@ -60,6 +62,7 @@ function Header() {
                     id="searchShop"
                     placeholder="Rechercher"
                     aria-label="recherche par mots-clés" />
+                
                 <button type="submit"
                     value="search"
                     className={style.submitHeader}

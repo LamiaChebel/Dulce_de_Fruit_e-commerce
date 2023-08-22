@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useState } from "react";
 
 import slider1 from "../../../assets/img/slider/slider-1.jpg";
@@ -51,33 +53,47 @@ function Slider() {
 
             <nav className={style.sliderNavOnImg}>
                 <button rel="prev"
-                    className={style.navBtn}
-                    aria-label="Preview"
-                    onClick={sliderHandlerPrev}>
+                        className={style.navBtn}
+                        aria-label="Preview"
+                        onClick={sliderHandlerPrev}>
                     <FontAwesomeIcon icon={faCircleChevronLeft}
-                        className={style.navOnImg}
-                        aria-hidden="true" />
+                                     className={style.navOnImg}
+                                     aria-hidden="true" />
                 </button>
-                <button rel="prev" className={style.navBtn}
-                    aria-label="Next"
-                    onClick={sliderHandlerNext}>
+
+                <button rel="prev" 
+                        className={style.navBtn}
+                        aria-label="Next"
+                        onClick={sliderHandlerNext}>
                     <FontAwesomeIcon icon={faCircleChevronRight}
-                        className={style.navOnImg}
-                        aria-hidden="true" />
+                                     className={style.navOnImg}
+                                     aria-hidden="true" />
                 </button>
+                
             </nav>
 
             <nav className={style.sliderNav}>
-                <button rel="prev" className={style.navBtn} aria-label="Preview" onClick={sliderHandlerPrev}>
-                    <FontAwesomeIcon icon={faCircle} className={style.navIcon} aria-hidden="true" />
+
+                <button rel="prev" 
+                        className={style.navBtn} 
+                        aria-label="Preview" 
+                        onClick={sliderHandlerPrev}>
+
+                    <FontAwesomeIcon icon={faCircle} 
+                                     className={style.navIcon} 
+                                     aria-hidden="true" />
                 </button>
-                <button rel="prev" className={style.navBtn}
-                    aria-label="Next"
-                    onClick={sliderHandlerNext}>
+
+                <button rel="prev" 
+                        className={style.navBtn}
+                        aria-label="Next"
+                        onClick={sliderHandlerNext}>
+                            
                     <FontAwesomeIcon icon={faCircle}
-                        className={style.navIcon}
-                        aria-hidden="true" />
+                                     className={style.navIcon}
+                                     aria-hidden="true" />
                 </button>
+
             </nav>
 
         </div>

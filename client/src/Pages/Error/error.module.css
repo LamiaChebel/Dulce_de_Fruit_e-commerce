@@ -1,0 +1,48 @@
+.error {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    margin: 2rem 0;
+}
+
+.error .txt {
+    padding: 2rem;
+}
+
+.error .errorTitle {
+    font-family: 'Nickainley', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error .txt p {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.linkBack {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.linkBack .chevron {
+    font-size: 1rem;
+    padding-right: 0.5rem;
+}
+
+/* Mode Desktop */
+
+@media screen and (min-width: 660px) {
+    .error {
+        background: url("../../assets/img/error404.jpg") center no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .error .txt {
+        width: 50%;
+    }
+    
+    
+}
