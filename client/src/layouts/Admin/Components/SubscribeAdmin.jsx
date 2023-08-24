@@ -33,7 +33,7 @@ function SubscribeAdmin() {
                     <input type="password"
                         name="password"
                         id="password"
-                        placeholder="Entrez votre mot de passe qui a au minimum 12 caractères dont des majuscules, des minuscules, des nombres et des caractères spéciaux"
+                        placeholder="Entrez votre mot de passe au minimum 12 caractères"
                     //    vamue={password}
                     />
 

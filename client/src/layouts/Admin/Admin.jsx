@@ -1,30 +1,25 @@
 import React from "react";
-
-import Header from "./Components/Header.jsx";
-import Footer from "./Components/Footer.jsx";
+import { Link } from "react-router-dom";
 
 // import FormLogin from "./Components/FormLogin.jsx";
 
 import style from "./admin.module.css";
 
-function Admin({child}) {
-    
+function Admin({ child }) {
+
     const Child = child;
 
     return (
         <>
-
-            <Header />
             <main className={style.adminMain}>
-
+                <nav className={style.adminNav}>
+                    <Link to={"/connection"}>Identifiez-vous</Link>
+                </nav>
                 <Child />
 
             </main>
 
-
-            <Footer />
         </>
-
 
     )
 }
