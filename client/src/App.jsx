@@ -22,8 +22,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/admin" element={<Admin />} >
-            <Route path="/connection" element={<Admin child={FormLogin} />} />
-            <Route path="/create-new-admin" element={<Admin child={SubscribeAdmin} />} />
+            <Route path="/admin/connection" element={<Admin child={FormLogin} />} />
+            <Route path="/admin/create-new-admin" element={<Admin child={SubscribeAdmin} />} />
           </Route>
         </Routes>
         <Footer />

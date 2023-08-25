@@ -13,7 +13,7 @@ function Admin({ child }) {
         <>
             <main className={style.adminMain}>
                 <nav className={style.adminNav}>
-                    <Link to={"/connection"}>Identifiez-vous</Link>
+                    <Link to={"/admin/connection"}>Identifiez-vous</Link>
                 </nav>
                 <Child />
 

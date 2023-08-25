@@ -3,12 +3,12 @@ import React from "react";
 import PageHeader from "../../../Components/UI/PageHeader.jsx";
 import styles from "./index.module.css";
 
-function CookiesPolicy() {
+function LegalMentions() {
   return (
-    <main className={styles.cookiespolicy}>
-      <PageHeader title="politique sur les cookies" />
+    <main className={styles.legalMentions}>
+      <PageHeader title="mentions légales" />
     </main>
   );
 }
 
-export default CookiesPolicy;
+export default LegalMentions;

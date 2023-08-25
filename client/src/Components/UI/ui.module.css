@@ -1,0 +1,10 @@
+.container {
+  color: var(--color-cta);
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px dotted var(--color-cta);
+  background-image: url("../../assets/img/background_pageHeader.png");
+  height: max-content;
+}

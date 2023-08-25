@@ -3,12 +3,12 @@ import React from "react";
 import PageHeader from "../../../Components/UI/PageHeader.jsx";
 import styles from "./index.module.css";
 
-function CookiesPolicy() {
+function DataProtection() {
   return (
-    <main className={styles.cookiespolicy}>
-      <PageHeader title="politique sur les cookies" />
+    <main className={styles.dataprotection}>
+      <PageHeader title="protection des données" />
     </main>
   );
 }
 
-export default CookiesPolicy;
+export default DataProtection;
