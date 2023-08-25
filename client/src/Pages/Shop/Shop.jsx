@@ -2,14 +2,14 @@ import React from "react";
 
 import PageHeader from "../../Components/UI/PageHeader.jsx";
 
-import styles from "./brand.module.css";
+import styles from "./shop.module.css";
 
-function Brand() {
+function Shop() {
   return (
     <main className={styles.brand}>
-      <PageHeader title="nos marques partenaires" />
+      <PageHeader title="notre boutique" />
     </main>
   )
 }
 
-export default Brand;
+export default Shop;

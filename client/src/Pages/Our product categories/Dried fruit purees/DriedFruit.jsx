@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../../../Components/UI/PageHeader.jsx";
+
+import styles from "./driedfruit.module.css";
 
 function DriedFruit() {
   return (
-    <div>DriedFruit</div>
+    <main className={styles.driedfruit}>
+      <PageHeader title="nos purées de fruits secs" />
+    </main>
   )
 }
 
-export default DriedFruit
+export default DriedFruit;

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+
+import PageHeader from "../../../Components/UI/PageHeader.jsx";
+
+import styles from "./sitemap.module.css";
 
 function Sitemap() {
   return (
-    <div>Sitemap</div>
+    <main className={styles.sitemap}>
+      <PageHeader title="plan du site" />
+    </main>
   )
 }
 
-export default Sitemap
+export default Sitemap;

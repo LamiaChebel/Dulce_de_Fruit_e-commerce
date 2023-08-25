@@ -6,6 +6,8 @@ import Header from "../../Components/Header/Header.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
 
 import Home from "../../Pages/Home/Home.jsx";
+import Shop from "../../Pages/Shop/Shop.jsx";
+import Recipe from "../../Pages/Recipes/Recipe.jsx";
 
 // Erreur 404
 import ErrorPage from "../../Pages/Error/ErrorPage.jsx";
@@ -42,7 +44,9 @@ function Template() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/notre-boutique" element={<Shop />} />
+      <Route path="/nos-recettes" element={<Recipe />} />
 
         {/* Route rubrique Nos catégories de produits */}
 

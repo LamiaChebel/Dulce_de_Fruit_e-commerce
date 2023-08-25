@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 
 // import FormLogin from "./Components/FormLogin.jsx";
 
 import style from "./admin.module.css";
 
-function Admin({ child }) {
-
-    const Child = child;
+function Admin() {
 
     return (
         <>
             <main className={style.adminMain}>
                 <nav className={style.adminNav}>
-                    <Link to={"/admin/connection"}>Identifiez-vous</Link>
+                    <Link to={"login"}>Connexion</Link>
+                    <Link to={"signup"}>S&apos;inscrire</Link>
                 </nav>
-                <Child />
-
+                <Outlet/>
             </main>
 
         </>

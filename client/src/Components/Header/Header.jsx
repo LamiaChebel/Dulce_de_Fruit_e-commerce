@@ -30,7 +30,7 @@ function Header() {
 
 
                 {/* Authentification */}
-                <Link to={"connexion"}
+                <Link to={"/connection"}
                     className={style.connexion}
                     title="Identifiez-vous !">
                     <FontAwesomeIcon icon={faCircleUser}
@@ -40,7 +40,7 @@ function Header() {
                 </Link>
 
                 {/* Panier */}
-                <Link to={"cart"}
+                <Link to={"/cart"}
                     className={style.cart}
                     title="Voir mon panier">
                     <FontAwesomeIcon icon={faBagShopping}

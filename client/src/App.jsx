@@ -12,7 +12,6 @@ import SubscribeAdmin from "./layouts/Admin/Components/SubscribeAdmin.jsx";
 import FormLogin from "./layouts/Admin/Components/FormLogin.jsx";
 
 function App() {
-
   const location = useLocation();
   // console.log(location);
 
@@ -21,10 +20,15 @@ function App() {
       <>
         <Header />
         <Routes>
-          <Route path="/admin" element={<Admin />} >
-            <Route path="/admin/connection" element={<Admin child={FormLogin} />} />
-            <Route path="/admin/create-new-admin" element={<Admin child={SubscribeAdmin} />} />
+          <Route path="/admin" element={<Admin />}>
+            <Route path="login" element={<FormLogin />} />
+            <Route
+              path="signup"
+              element={<SubscribeAdmin />}
+            />
+
           </Route>
+
         </Routes>
         <Footer />
       </>
@@ -36,7 +40,6 @@ function App() {
       </>
     );
   }
-
 }
 
 export default App;

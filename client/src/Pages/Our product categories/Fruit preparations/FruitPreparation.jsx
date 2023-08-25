@@ -1,8 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../../../Components/UI/PageHeader.jsx";
+
+import styles from "./fruitprep.module.css";
 
 function FruitPreparation() {
   return (
-    <div>FruitPreparation</div>
+    <main className={styles.fruitprep}>
+      <PageHeader title="nos préparations de fruits" />
+    </main>
   )
 }
 

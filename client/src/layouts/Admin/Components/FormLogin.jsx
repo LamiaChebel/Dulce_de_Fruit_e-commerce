@@ -41,7 +41,7 @@ function FormLogin() {
             
             <div className={style.subBtn}>
                 <p className={style.subTxt}>Pas encore de compte ?</p>
-                <Link to={"/admin/create-account-admin"} className={style.createAdmin}>Cr&eacute;er un compte administrateur</Link>
+                <Link to={"/admin/signup"} className={style.createAdmin}>Cr&eacute;er un compte administrateur</Link>
             </div>
         </section>
 

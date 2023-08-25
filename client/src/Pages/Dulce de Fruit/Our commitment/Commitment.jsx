@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+
+import PageHeader from "../../../Components/UI/PageHeader.jsx";
+
+import styles from "./commitment.module.css";
 
 function Commitment() {
   return (
-    <div>Commitment</div>
+    <main className={styles.commitment}>
+      <PageHeader title="nos engagements" />
+    </main>
   )
 }
 
-export default Commitment
+export default Commitment;
