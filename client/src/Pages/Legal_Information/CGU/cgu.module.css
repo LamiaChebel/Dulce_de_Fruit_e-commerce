@@ -1,0 +1,26 @@
+.cgu article {
+    width:80%;
+    margin: 3rem auto;
+    padding : 1rem;
+}
+
+.cgu p {
+    padding: 1rem;
+}
+
+.cgu hr {
+    margin: 2rem 0;
+}
+
+.cgu h3 {
+    color: var(--color-cta);
+    text-align: center;
+    padding: 2rem;
+}
+.cgu a {
+    text-decoration: none;
+}
+
+.cgu span {
+    font-weight: bold;
+}

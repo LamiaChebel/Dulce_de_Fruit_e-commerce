@@ -13,31 +13,31 @@ import Recipe from "../../Pages/Recipes/Recipe.jsx";
 import ErrorPage from "../../Pages/Error/ErrorPage.jsx";
 
 // Nos catégories de produits
-import FruitPreparation from "../../Pages/Our product categories/Fruit preparations/FruitPreparation.jsx";
-import FruitPuree from "../../Pages/Our product categories/Fruit purees/FruitPuree.jsx";
-import DriedFruit from "../../Pages/Our product categories/Dried fruit purees/DriedFruit.jsx";
-import Smoothie from "../../Pages/Our product categories/Smoothies/Smoothie.jsx";
+import FruitPreparation from "../../Pages/Our_product_categories/Fruit_preparations/FruitPreparation.jsx";
+import FruitPuree from "../../Pages/Our_product_categories/Fruit_purees/FruitPuree.jsx";
+import DriedFruit from "../../Pages/Our_product_categories/Dried_fruit_purees/DriedFruit.jsx";
+import Smoothie from "../../Pages/Our_product_categories/Smoothies/Smoothie.jsx";
 
 // Nos marques
-import Brand from "../../Pages/Our Brands/Brand.jsx";
+import Brand from "../../Pages/Our_Brands/Brand.jsx";
 
 // Dulce de Fruit
-import Story from "../../Pages/Dulce de Fruit/Our story/Story.jsx";
-import Commitment from "../../Pages/Dulce de Fruit/Our commitment/Commitment.jsx";
+import Story from "../../Pages/Dulce_de_Fruit/Our_story/Story.jsx";
+import Commitment from "../../Pages/Dulce_de_Fruit/Our_commitment/Commitment.jsx";
 
 // Service Client
-import ShipInfo from "../../Pages/Customer Service/Shipping information/ShipInfo.jsx";
-import Faq from "../../Pages/Customer Service/FAQ/Faq.jsx";
-import Contact from "../../Pages/Customer Service/Contact us/Contact.jsx";
-import Supplier from "../../Pages/Customer Service/Supplier area/Supplier.jsx";
-import Sitemap from "../../Pages/Customer Service/Sitemap/Sitemap.jsx";
+import ShipInfo from "../../Pages/Customer_Service/Shipping_information/ShipInfo.jsx";
+import Faq from "../../Pages/Customer_Service/FAQ/Faq.jsx";
+import Contact from "../../Pages/Customer_Service/Contact_us/Contact.jsx";
+import Supplier from "../../Pages/Customer_Service/Supplier_area/Supplier.jsx";
+import Sitemap from "../../Pages/Customer_Service/Sitemap/Sitemap.jsx";
 
 // Informations Légales
-import LegalMentions from "../../Pages/Legal Information/Legal mentions/Index.jsx";
-import Cgv from "../../Pages/Legal Information/CGV/Cgv.jsx";
-import Cgu from "../../Pages/Legal Information/CGU/Cgu.jsx";
-import DataProtection from "../../Pages/Legal Information/Data protection/Index.jsx";
-import CookiesPolicy from "../../Pages/Legal Information/Cookies policy/Index.jsx";
+import LegalMentions from "../../Pages/Legal_Information/Legal_mentions/Index.jsx";
+import Cgv from "../../Pages/Legal_Information/CGV/Cgv.jsx";
+import Cgu from "../../Pages/Legal_Information/CGU/Cgu.jsx";
+import DataProtection from "../../Pages/Legal_Information/Data_protection/Index.jsx";
+import CookiesPolicy from "../../Pages/Legal_Information/Cookies_policy/Index.jsx";
 
 function Template() {
   return (

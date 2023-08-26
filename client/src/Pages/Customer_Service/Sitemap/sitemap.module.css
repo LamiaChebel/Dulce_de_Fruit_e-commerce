@@ -1,0 +1,45 @@
+.sitemap .flex {
+    width: 60%;
+    margin: 1rem auto;
+}
+
+.sitemap .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1.5rem var(--color-primary);
+    gap: 2rem;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.sitemap .card ul {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.sitemap .card ul li {
+    margin: 0 1.5rem 1rem;
+}
+
+.sitemap .card a {
+    text-decoration: none;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+    .sitemap .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        gap: 5rem;
+
+    }
+
+    .sitemap .card {
+        flex: 1 40%;
+
+    }
+}

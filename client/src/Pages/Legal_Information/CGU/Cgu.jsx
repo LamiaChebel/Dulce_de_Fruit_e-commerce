@@ -16,7 +16,7 @@ function Cgu() {
           <p>
             Le pr&eacute;sent document a pour objet de d&eacute;finir les
             modalit&eacute;s et conditions dans lesquelles d&apos;une part,
-            <span>Dulce de Fruit</span>
+            <span> Dulce de Fruit </span>
             met &agrave; la disposition de ses utilisateurs le site, et les
             services disponibles sur le site et d&apos;autre part, la
             mani&egrave;re par laquelle l&apos;utilisateur acc&egrave;de au site
@@ -28,7 +28,7 @@ function Cgu() {
           </p>
           <p>
             Pour l&apos;utilisateur, le simple acc&egrave;s au site de
-            <span>Dulce de Fruit</span> &agrave; l&apos;adresse URL suivante{" "}
+            <span> Dulce de Fruit </span> &agrave; l&apos;adresse URL suivante{" "}
             <Link to={"/"}>https://www.dulcedefruit.fr</Link> implique
             l&apos;acceptation de l&apos;ensemble des conditions d&eacute;crites
             ci-apr&egrave;s.
@@ -38,7 +38,7 @@ function Cgu() {
         <section>
           <h3>1 - Propri&eacute;t&eacute; intellectuelle et contrefaçons.</h3>
           <p>
-            <span>Dulce de Fruit</span>est propri&eacute;taire des droits de
+            <span> Dulce de Fruit </span>est propri&eacute;taire des droits de
             propri&eacute;t&eacute; intellectuelle et d&eacute;tient les droits
             d&apos;usage sur tous les &eacute;l&eacute;ments accessibles sur le
             site internet, notamment les textes, images, graphismes, logos,
@@ -49,7 +49,7 @@ function Cgu() {
             publication, adaptation de tout ou partie des &eacute;l&eacute;ments
             du site, quel que soit le moyen ou le proc&eacute;d&eacute;
             utilis&eacute;, est interdite, sauf autorisation &eacute;crite
-            pr&eacute;alable de <span>Dulce de Fruit</span>
+            pr&eacute;alable de <span> Dulce de Fruit </span>
           </p>
           <p>
             Toute exploitation non autoris&eacute;e du site ou de l&apos;un
@@ -71,19 +71,19 @@ function Cgu() {
         <section>
           <h3>2 - Limitations de responsabilit&eacute;.</h3>
           <p>
-            <span>Dulce de Fruit</span>ne pourra &ecirc;tre tenu pour
+            <span> Dulce de Fruit </span>ne pourra &ecirc;tre tenu pour
             responsable des dommages directs et indirects caus&eacute;s au
             mat&eacute;riel de l&apos;utilisateur, lors de l&apos;acc&egrave;s
             au site <Link to={"/"}>www.dulcedefruit.fr</Link>.
           </p>
           <p>
-            <span>Dulce de Fruit</span>d&eacute;cline toute
+            <span> Dulce de Fruit </span>d&eacute;cline toute
             responsabilit&eacute; quant &agrave; l&apos;utilisation qui pourrait
             &ecirc;tre faite des informations et contenus pr&eacute;sents sur{" "}
             <Link to={"/"}>www.dulcedefruit.fr</Link>.
           </p>
           <p>
-            <span>Dulce de Fruit</span>s&apos;engage &agrave; s&eacute;curiser
+            <span> Dulce de Fruit </span>s&apos;engage &agrave; s&eacute;curiser
             au mieux le site <Link to={"/"}>www.dulcedefruit.fr</Link>,
             cependant sa responsabilit&eacute; ne pourra &ecirc;tre mise en
             cause si des donn&eacute;es ind&eacute;sirables sont
@@ -94,14 +94,14 @@ function Cgu() {
           <p>
             Des espaces interactifs (espace contact ou commentaires) sont
             &agrave; la disposition des utilisateurs.{" "}
-            <span>Dulce de Fruit</span> se r&eacute;serve le droit de supprimer,
+            <span> Dulce de Fruit </span> se r&eacute;serve le droit de supprimer,
             sans mise en demeure pr&eacute;alable, tout contenu
             d&eacute;pos&eacute; dans cet espace qui contreviendrait &agrave; la
             l&eacute;gislation applicable en France, en particulier aux
             dispositions relatives &agrave; la protection des donn&eacute;es.
           </p>
           <p>
-            Le cas &eacute;ch&eacute;ant, <span>Dulce de Fruit</span> se
+            Le cas &eacute;ch&eacute;ant,<span> Dulce de Fruit </span> se
             r&eacute;serve &eacute;galement la possibilit&eacute; de mettre en
             cause la responsabilit&eacute; civile et/ou p&eacute;nale de
             l&apos;utilisateur, notamment en cas de message &agrave;

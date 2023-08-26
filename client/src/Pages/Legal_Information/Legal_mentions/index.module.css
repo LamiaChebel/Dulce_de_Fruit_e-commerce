@@ -1,0 +1,30 @@
+.legalMentions article {
+    width:80%;
+    margin: 3rem auto;
+    padding : 1rem;
+}
+
+.legalMentions p {
+    padding: 1rem;
+}
+
+.legalMentions h3 {
+    color: var(--color-cta);
+    text-align: center;
+    padding: 2rem;
+}
+.legalMentions a {
+    text-decoration: none;
+}
+
+.legalMentions span {
+    font-weight: bold;
+}
+
+.legalMentions ul {
+    padding-left: 5rem;
+}
+
+.legalMentions ul li{
+    padding: 1rem 0;
+}

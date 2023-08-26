@@ -17,7 +17,7 @@ function LegalMentions() {
             En vertu de l&apos;article 6 de la loi n&deg; 2004-575 du 21 juin 2004 pour
             la confiance dans l&apos;&eacute;conomie num&eacute;rique, il est pr&eacute;cis&eacute; aux
             utilisateurs du site internet
-            <Link to={"https://www.dulcedefruit.fr"}>Dulce de Fruit</Link>
+            <Link to={"https://www.dulcedefruit.fr"}> Dulce de Fruit </Link>
             l&apos;identit&eacute; des diff&eacute;rents intervenants dans le cadre de sa
             r&eacute;alisation et de son suivi:
           </p>

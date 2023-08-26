@@ -1,0 +1,82 @@
+.supplier .cont1,
+.supplier .cont2 {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.supplier figure {
+  display: none;
+}
+
+ .txt p,
+ .cont2 p
+{
+  padding: 1rem 0 1rem;
+}
+
+.child2 {
+    border: 0.2rem solid var(--color-text);
+    border-radius: 2rem;
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+  }
+  
+.child2 .mailIcon {
+  position: absolute;
+  top: -3rem;
+  left: 5rem;
+  border: 0.5rem solid var(--color-primary);
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  z-index: 2;
+}
+
+.child2 h3 {
+  font-size: 2rem;
+  padding: 3rem 1rem 1rem;
+  text-align: center;
+}
+
+.child2 a {
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 2rem;
+  border : 0.1rem solid var(--color-primary);
+  width: 16rem;
+}
+
+/* Responsive */
+
+@media screen and (min-width:768px){
+
+    .cont1, .cont2{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .cont1 figure {
+        display: block;
+        width: 50%;
+        padding: 1rem;
+
+    }
+
+    .cont2 {
+        flex-direction: row-reverse;
+        gap: 5rem;
+
+    }
+
+    .child1, .child2 {
+        flex: 1 50%;
+    }
+}
