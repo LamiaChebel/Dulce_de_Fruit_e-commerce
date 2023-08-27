@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import slider1 from "../../../assets/img/slider/slider-1.jpg";
 import slider2 from "../../../assets/img/slider/slider-2.jpg";
@@ -24,6 +24,17 @@ function Slider() {
     ];
 
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        index===1 ? setIndex(0) : setIndex(index + 1);
+      }, 4000);
+    
+      return () => {
+        clearTimeout(timer);
+      }
+    }, [index])
+    
     function sliderHandlerNext(e) {
         e.preventDefault();
         if (index === imagesSlider.length - 1) {
@@ -80,7 +91,7 @@ function Slider() {
                         onClick={sliderHandlerPrev}>
 
                     <FontAwesomeIcon icon={faCircle} 
-                                     className={style.navIcon} 
+                                     className={`${style.navIcon} ${!index ? style.isactive : null}`} 
                                      aria-hidden="true" />
                 </button>
 
@@ -90,7 +101,7 @@ function Slider() {
                         onClick={sliderHandlerNext}>
                             
                     <FontAwesomeIcon icon={faCircle}
-                                     className={style.navIcon}
+                                     className={`${style.navIcon} ${index ? style.isactive : null}`}
                                      aria-hidden="true" />
                 </button>
 

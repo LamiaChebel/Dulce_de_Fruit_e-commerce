@@ -1,0 +1,54 @@
+.adminBanner, .adminFooter {
+    padding: 2rem;
+    color: var(--color-secondary);
+}
+
+.adminBanner {
+    margin-bottom: 2rem;
+    font-family: var(--font-title);
+}
+
+.adminNav {
+    text-align: center;
+    padding: 3rem;
+}
+
+.adminNav a, .subBtn a {
+    text-decoration: none;
+    padding: 2rem;
+}
+
+.subBtn, .subBtn p {
+    padding: 2rem;
+}
+
+.formSection h3 {
+    color: var(--color-cta);
+    font-family: var(--font-title);
+}
+
+.formSection {
+    width:70%;
+    margin: auto;
+}
+
+.formSection fieldset {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    gap: 1rem;
+}
+
+.formSection input {
+    margin: 2rem;
+}
+.formSection input:not(.connect){
+    border-radius: 0;
+}
+
+.formSection .connect {
+    text-align: center;
+    width: 18rem;
+    align-self: center;
+    
+}

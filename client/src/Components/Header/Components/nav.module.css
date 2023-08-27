@@ -3,6 +3,22 @@
     color: var(--color-primary);
 }
 
+.navHeader > .submenu {
+    height: 5.6rem;
+}
+.burgerMenu {
+    display: grid;
+    grid-template-columns: 4fr 0.4fr;
+    grid-template-rows: 1fr;
+    border-bottom: 0.1rem solid var(--color-text);
+    
+}
+
+.burgerMenu .btn {
+    background:transparent;
+    border: none;
+    
+}
 .navHeader a,
 .navHeader p {
     display: block;
@@ -12,10 +28,23 @@
     text-decoration: none;
 }
 
-.menuTxt {
-    border-bottom: 0.1rem solid var(--color-text);
+.desktopNav, .shopList {
+    display: none;
 }
 
+.shopList{
+    background-color: var(--color-cta-menu);
+}
+.submenu .btn {
+    position: relative;
+    top: -8vw;
+    left: 94vw;
+    background: transparent;
+    border: none;
+}
+.isActive {
+    display:block;
+}
 /* Mode Desktop */
 
 @media screen and (min-width: 768px) {
@@ -24,7 +53,7 @@
         display: inline-block;
     }
 
-    .navHeader p {
+    .burgerMenu {
         display: none;
     }
     .desktopNav {
