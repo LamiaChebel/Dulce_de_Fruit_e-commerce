@@ -38,6 +38,7 @@ import Cgv from "../../Pages/Legal_Information/CGV/Cgv.jsx";
 import Cgu from "../../Pages/Legal_Information/CGU/Cgu.jsx";
 import DataProtection from "../../Pages/Legal_Information/Data_protection/Index.jsx";
 import CookiesPolicy from "../../Pages/Legal_Information/Cookies_policy/Index.jsx";
+import SingleProduct from "../../Pages/Shop/SingleProduct.jsx";
 
 function Template() {
   return (
@@ -46,6 +47,7 @@ function Template() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/notre-boutique" element={<Shop />} />
+      <Route path="/notre-boutique/:id" element={<SingleProduct />} />
       <Route path="/nos-recettes" element={<Recipe />} />
 
         {/* Route rubrique Nos catégories de produits */}

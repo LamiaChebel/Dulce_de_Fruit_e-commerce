@@ -8,8 +8,13 @@ import Admin from "./layouts/Admin/Admin.jsx";
 import Header from "./layouts/Admin/Components/Header.jsx";
 import Footer from "./layouts/Admin/Components/Footer.jsx";
 
-import SubscribeAdmin from "./layouts/Admin/Components/SubscribeAdmin.jsx";
 import FormLogin from "./layouts/Admin/Components/FormLogin.jsx";
+import SubscribeAdmin from "./layouts/Admin/Components/SubscribeAdmin.jsx";
+import Dashboard from "./layouts/Admin/Components/Dashboard.jsx";
+import Product from "./layouts/Admin/Components/Product.jsx";
+import ProdCategory from "./layouts/Admin/Components/ProdCategory.jsx";
+import Brand from "./layouts/Admin/Components/Brand.jsx";
+
 
 function App() {
   const location = useLocation();
@@ -21,14 +26,15 @@ function App() {
         <Header />
         <Routes>
           <Route path="/admin" element={<Admin />}>
-            <Route path="login" element={<FormLogin />} />
-            <Route
-              path="signup"
-              element={<SubscribeAdmin />}
-            />
-
+            <Route path="signin" element={<FormLogin />} />
+            
+            <Route path="signin/dashboard" element={<Dashboard />} />
+            <Route path="signin/dashboard/products" element={<Product />} />
+            <Route path="signin/dashboard/products-categories" element={<ProdCategory />} />
+            <Route path="signin/dashboard/brands" element={<Brand />} />
+           
+            <Route path="signup" element={<SubscribeAdmin />} />
           </Route>
-
         </Routes>
         <Footer />
       </>

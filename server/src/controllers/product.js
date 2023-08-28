@@ -97,89 +97,127 @@ export const one = async (req, res) => {
   }
 };
 
-// Sélection de certains produits coup de coeur
+// Sélection de certainsu coup de coeur
 
-export const favorite = async(req, res) => {
-
+export const favorite = async (req, res) => {
   try {
-      const query = `SELECT product.id, product.name, product.ttc_price,
+    const query = `SELECT product.id, product.name, product.ttc_price,product.our_favorite
+                    brand.title AS brandTitle,
+                    img_product.title AS img_productTitle,
+                    img_product.url AS img_productUrl
+                    FROM product
+                    JOIN brand ON product.brand_id = brand.id
+                    JOIN img_product ON img_product.product_id = product.id
+                    WHERE product.our_favorite = 1
+                    ORDER BY product.id DESC
+                    LIMIT 1`;
 
-                      brand.id AS brandId, brand.title AS brandTitle,
+    const [fav] = await Query.find(query);
+    console.log(fav.length);
 
-                      img_product.id AS imgProductId,
-                      img_product.title AS img_productTitle,
-                      img_product.url AS img_productUrl
-
-                      FROM product
-
-                      JOIN brand ON product.brand_id = brand.id
-                      JOIN img_product ON img_product.product_id = product.id
-                      WHERE product.our_favorite = 1`;
-
-      const [fav] = await Query.find(query);
-      console.log(fav);
-
-      if(fav){
-          const msg = "Display favorite products";
-          res.status(200).json(success(msg, fav));
-      } else {
-          const msg = "Pb to display favorite products because syntax error in the objet ";
-          res.status(200).json(success(msg));
-      }
+    if (!fav.length) {
+      const msg =
+        "Pb to display favorite products because syntax error in the objet ";
+      res.status(200).json(success(msg));
+    } else {
+      const msg = "Display favorite products";
+      res.status(200).json(success(msg));
+    }
   } catch (error) {
     res.status(500).json(error);
     throw Error(error);
   }
-}
+};
 
 // Sélection des nouveautés
 
 export const newProduct = async (req, res) => {
   try {
-      const query = `SELECT product.id, product.name, product.ttc_price,
-                     product.created_at,
-
-                     brand.id AS brandId, brand.title AS brandTitle,
-
-                    img_product.id AS imgProductId,
+    const query = `SELECT product.id, product.name, product.ttc_price,product.created_at,
+                    brand.title AS brandTitle,
                     img_product.title AS img_productTitle,
                     img_product.url AS img_productUrl
-
                     FROM product
-
                     JOIN brand ON product.brand_id = brand.id
                     JOIN img_product ON img_product.product_id = product.id
-                    ORDER BY product.id DESC LIMIT 3`;
+                    ORDER BY created_at DESC LIMIT 1`;
 
-      const [newResult] = await Query.find(query);
-      console.log(typeof newResult);
+    const [newResult] = await Query.find(query);
+    console.log(newResult);
 
-      if(newResult){
+    if (newResult.length) {
       const msg = "Display new products";
-      res.status(200).json(success(msg, newResult));
-      }
-    else {
-      const msg = "Pb to display new products because syntax error in the objet ";
       res.status(200).json(success(msg));
-  }
-
+    } else {
+      const msg =
+        "Pb to display new products because syntax error in the objet ";
+      res.status(200).json(success(msg));
+    }
   } catch (error) {
     res.status(500).json(error);
     throw Error(error);
   }
-}
+};
 
 //  Pour ajouter un produit dans la base de données
 
 export const addProduct = async (req, res) => {
-  const data = {
-    ...req.body,
-  };
-console.log(data);
-  try {
-    const query = `INSERT INTO product (ref,name,description, detail_desc,ttc_price, kg_price,stock, weight, ingredients_list, kJ_calories, kcal_calories,total_fat, saturated_fat,total_carbohydrate, total_sugar,fibre, protein, salt,our_favorite, created_at,updated_at, brand_id, product_category_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW(),NULL,?,?)`;
+  console.log(req.body);
 
-    const result = await Query.write(query, data);
+  const {
+    ref,
+    name,
+    description,
+    detail_desc,
+    ttc_price,
+    kg_price,
+    stock,
+    weight,
+    ingredients_list,
+    kJ_calories,
+    kcal_calories,
+    total_fat,
+    saturated_fat,
+    total_carbohydrate,
+    total_sugar,
+    fibre,
+    protein,
+    salt,
+    our_favorite,
+    created_at,
+    updated_at,
+    brand_id,
+    product_category_id,
+  } = req.body;
+
+  try {
+    const query = `INSERT INTO product (ref,name,description, detail_desc,ttc_price, kg_price,stock, weight, ingredients_list, kJ_calories, kcal_calories,total_fat, saturated_fat,total_carbohydrate, total_sugar,fibre, protein, salt,our_favorite, created_at,updated_at, brand_id, product_category_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW(),?,?,?)`;
+
+    const result = await Query.write(query, [
+      ref,
+      name,
+      description,
+      detail_desc,
+      ttc_price,
+      kg_price,
+      stock,
+      weight,
+      ingredients_list,
+      kJ_calories,
+      kcal_calories,
+      total_fat,
+      saturated_fat,
+      total_carbohydrate,
+      total_sugar,
+      fibre,
+      protein,
+      salt,
+      our_favorite,
+      created_at,
+      updated_at,
+      brand_id,
+      product_category_id,
+    ]);
 
     if (result.affectedRows) {
       const msg = `product added`;
@@ -223,8 +261,6 @@ export const update = async (req, res) => {
   };
 
   try {
-
-
     const query = `UPDATE product SET ref = ?, name = ?, 
     description = ?, detail_desc = ?, 
     ttc_price = ?, kg_price = ?, 

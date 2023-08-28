@@ -12,26 +12,6 @@ const {TOKEN_SECRET} = process.env;
 
 const saltRounds = 10;
 
-// const checkToken = async (req, res) => {
-
-//     try {
-//         const query = "SELECT lastname, firstname, birthdate, email, p email FROM customer WHERE id = ?";
-//         const [customer] = await Query.findByValue(query, req.params.id);
-        
-//         if(customer){
-//             const msg = "Valid customer";
-//             res.status(200).json(success(msg, customer));
-//         } else {
-//             const msg = "No account. Invalid id";
-//             res.status(200).json(success(msg));
-//         }
-
-//     } catch (error) {
-//         res.status(500).json(error);
-//         throw Error(error);
-//     }
-// }
-
 const signup = async (req, res) => {
 
     try {    
