@@ -1,88 +1,143 @@
-// import { useEffect, useState } from "react";
-// // import EditTea from "./Create/EditTea";
+import React from "react";
 
-// import spinner from "../../../assets/svg/spinner.svg";
+import { useEffect, useState } from "react";
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPenToSquare, faTrashCan, faHeart, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { getDatas } from "../../../services/api.js";
 
-// function CrudTeas() {
+import spinner from "../../../assets/svg/spinner.svg";
 
-//     const [products, setProducts] = useState([]);
-//     const [key, setKey] = useState("");
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPenToSquare,
+  faTrashCan,
+  faHeart,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
-//     useEffect(() => {
-//         async function fetchTeas() {
-//             try {
-//                 const res = await fetch(`/api/v1/cupoftea/teas`);
-//                 if (!res.ok) {
-//                     throw new Error(`status : ${res.status}, message : ${res.statusText}`);
-//                 }
-//                 const results = await res.json();
+import style from "../admin.module.css";
 
-//                 setTeas(results.teas);
-//                 setKey(results.teas[0]);
-//                 console.log(results.teas[0]);
-//             }
-//             catch (error) {
-//                 console.log(`Problem to fetch teas`, error);
-//             }
-//         }
-//         fetchTeas();
-//     }, [])
+function Product() {
+  const [products, setProducts] = useState([]);
+  const [key, setKey] = useState("");
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const products = await getDatas(
+          "http://localhost:3001/api/v1/dulce-de-fruit/product"
+        );
 
-//     return (
+        setProducts(products.data.result);
+        setKey(products.data.result[0]);
 
-//         <>
-//             {(!teas.length && !key.length) < 0 ?
-//                 <figure>
-//                     <img src={spinner} alt="chargement de la page" />
-//                     <figcaption>Chargement de la page...</figcaption>
-//                 </figure>
-//                 : <>
-//                     <h3>Liste des thés</h3>
+    } catch (error) {
+        throw new Error(error);
+      }
+    }
+    fetchData();
+  }, []);
 
-//                     <table>
-//                         < thead >
-//                             <tr>
-//                                 {Object.keys(key).map((k, i) => {
-//                                     return ((k === "imageTitle" || k === "category_id") ? <></> : <th key={i}>{k}</th>)
-//                                 })}
-//                                 <th>Actions</th>
-//                             </tr>
-//                         </thead >
-//                         <tbody>
-//                             {teas.map((tea, i) => {
-//                                 let d = new Date(tea.created_at);
-//                                 return (
-//                                     <tr key={i}>
-//                                         <td>{tea.id}</td>
-//                                         <td>{tea.title}</td>
-//                                         <td>{tea.subtitle}</td>
-//                                         <td>{tea.description}</td>
-//                                         <td>{tea.story_tea}</td>
-//                                         <td>{d.toLocaleDateString() + ' à ' + d.toLocaleTimeString()}</td>
-//                                         <td>{tea.our_favorite ? <FontAwesomeIcon icon={faHeart} beat style={{color: "#ff0000"}}  aria-hidden="true" /> : <FontAwesomeIcon icon={faXmark} />}</td>
-//                                         <td><img src={tea.img} alt={tea.imageTitle} /></td>
-//                                         <td>
-//                                             <button><FontAwesomeIcon icon={faPenToSquare} aria-hidden="true" /></button>
-//                                             <button><FontAwesomeIcon icon={faTrashCan} aria-hidden="true" /></button>
-//                                         </td>
-//                                     </tr>
-//                                 )
-//                             })}
-//                         </tbody>
-//                         <tfoot>
-//                             {Object.keys(key).map((k, i) => {
-//                                 return ((k === "imageTitle") ? <></> : <th key={i}>{k}</th>)
-//                             })}
-//                             <th>Actions</th>
-//                         </tfoot>
-//                     </table>
-//                 </>}
-//         </>
-//     )
-// }
+  return (
+    <>
+      {(!products.length && !key.length) < 0 ? (
+        <figure>
+          <img src={spinner} alt="chargement de la page" />
+          <figcaption>Chargement de la page...</figcaption>
+        </figure>
+      ) : (
+        <>
+          <h3>Liste des produits</h3>
 
-// export default CrudTeas;
+          <table>
+            <thead>
+              <tr>
+                {Object.keys(key).map((k, i) => {
+                  return k === "brandId" || k === "brandTitle" || k === "imgProductId" || k === "categoryId" || k === "categoryImgTitle" || k === "categoryImgUrl" || k === "detail_desc" || k === "ingredients_list"
+                  || k === "kJ_calories" || k === "kcal_calories"|| k === "total_fat"|| k === "saturated_fat"|| k === "total_carbohydrate"|| k === "total_sugar"|| k === "fibre"|| k === "salt"
+                  || k === "protein" || k === "img_productTitle" ? (
+                    <></>
+                  ) : (
+                    <th key={i}>{k}</th>
+                  );
+                })}
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product, i) => {
+                let d = new Date(product.created_at);
+                let d1 = new Date(product.updated_at);
+
+                return (
+                  <tr key={i}>
+                    <td>{product.id}</td>
+                    <td>{product.ref}</td>
+                    <td>{product.name}</td>
+                    <td>{product.description}</td>
+                    <td>{product.ttc_price}</td>
+                    <td>{product.kg_price}</td>
+                    <td>{product.stock === 0 ? "Non disponible" : product.stock}</td>
+                    <td>{product.weight}</td>
+
+                    <td>
+                      {product.our_favorite ? (
+                        <FontAwesomeIcon
+                          icon={faHeart}
+                          beat
+                          style={{ color: "#ff0000" }}
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <FontAwesomeIcon icon={faXmark} />
+                      )}
+                    </td>
+
+                    <td>
+                      {d.toLocaleDateString() + " à " + d.toLocaleTimeString()}
+                    </td>
+                    <td>
+                      {d1 === null ? "vide" :d1.toLocaleDateString() + " à " + d1.toLocaleTimeString()}
+                    </td>
+
+                    <td>
+                      <img
+                        src={product.img_productUrl}
+                        alt={product.img_productTitle}
+                      />
+                    </td>
+
+                    <td>{product.categoryName}</td>
+
+                    <td>
+                      <button>
+                        <FontAwesomeIcon
+                          icon={faPenToSquare}
+                          aria-hidden="true"
+                        />
+                      </button>
+                      <button>
+                        <FontAwesomeIcon icon={faTrashCan} aria-hidden="true" />
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            <tfoot>
+              <tr>
+                {Object.keys(key).map((k, i) => {
+                  return k === "brandId" || k === "brandTitle" || k === "imgProductId" || k === "categoryId" || k === "categoryImgTitle" || k === "categoryImgUrl" || k === "detail_desc" || k === "ingredients_list"
+                  || k === "kJ_calories" || k === "kcal_calories"|| k === "total_fat"|| k === "saturated_fat"|| k === "total_carbohydrate"|| k === "total_sugar"|| k === "fibre"|| k === "salt"
+                  || k === "protein" || k === "img_productTitle" ? <></> : <th key={i}>{k}</th>;
+                })}
+                <th>Actions</th>
+              </tr>
+            </tfoot>
+          </table>
+        </>
+      )}
+    </>
+  );
+}
+
+export default Product;

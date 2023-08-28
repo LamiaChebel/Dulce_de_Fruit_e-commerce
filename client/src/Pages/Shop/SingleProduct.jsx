@@ -23,23 +23,12 @@ function SingleProduct() {
     const [product, setProduct] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
-    // const [pkg, setPkg] = useReducer((currentPkg, newPkg) => ({
-    //     ...currentPkg, ...newPkg,
-    // }), { idPkg: null, ref: null, price: null, });
-
     useEffect(() => {
         async function fetchProduct() {
             try {
                 const product = await getDatas(`http://localhost:3001/api/v1/dulce-de-fruit/product/${id}`);
-                // const baseproduct = product.data.result.productInfo[0];
                 
                 setProduct(product.data.result);
-                console.log(product.data.result);
-                // setPkg({
-                //     idPkg: baseproduct.idPackaging,
-                //     ref: baseproduct.ref,
-                //     price: baseproduct.price
-                // });
                 
                 setIsLoading(false);
             } catch (error) {
@@ -48,11 +37,6 @@ function SingleProduct() {
         }
         fetchProduct();
     }, [id]);
-
-    // const changeHandler = (e) => {
-    //     const indexPackaging = product.productInfo.findIndex(t => parseInt(e.target.value) === t.idPackaging);
-    //     setPkg({idPkg: parseInt(e.target.value), ref: product.productInfo[indexPackaging].ref, price: product.productInfo[indexPackaging].price});
-    // };
 
     // const handleAddToCart = (e) => {
     //     e.preventDefault();
@@ -91,6 +75,7 @@ function SingleProduct() {
 				</form> */}
 
                 <p>{product[0].ttc_price}€</p>
+                <p>{product[0].weight}</p>
                 <p>{product[0].kg_price}€</p>
 
 				{/* <button className="addToCart" onClick={handleAddToCart}>ajouter au panier</button>

@@ -1,12 +1,16 @@
 import axios from "axios";
 
-async function getCustomerAuth(url/*, TOKEN*/) {
+// Authentification client
+
+async function getAdminAuth(url/*, TOKEN*/) {
     try {
         return await axios.get(url/*, { headers: { "x-access-token": TOKEN } }*/);
     } catch (error) {
         return error;
     }
 }
+
+// Lecture des données
 
 async function getDatas(url) {
     try {
@@ -16,9 +20,41 @@ async function getDatas(url) {
     }
 }
 
+//  Ajout de contenus API
+
+async function add(url, datas) {
+    try {
+        return await axios.post(url, datas);
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+// Modifier
+
+async function update(url, data) {
+    try {
+        return await axios.patch(url, data);
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+// Supprimer
+
+async function remove(url, data) {
+    try {
+        return await axios.delete(url, data);
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+
+// Enregistrement 
 async function signup(datas) {
     try {
-        return await axios.post("/customer/signup", datas);
+        return await axios.post("/admin/signup", datas);
     } catch (error) {
         throw new Error(error);
     }
@@ -26,10 +62,10 @@ async function signup(datas) {
 
 async function signin(datas) {
     try {
-        return await axios.post("/ucustomer/signin", datas);
+        return await axios.post("/admin/signin", datas);
     } catch (error) {
         throw new Error(error);
     }
 }
 
-export { getCustomerAuth, getDatas, signup, signin };
+export { getAdminAuth, getDatas, add, update, remove, signup, signin };

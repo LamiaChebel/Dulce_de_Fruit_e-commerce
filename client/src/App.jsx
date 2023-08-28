@@ -15,10 +15,13 @@ import Product from "./layouts/Admin/Components/Product.jsx";
 import ProdCategory from "./layouts/Admin/Components/ProdCategory.jsx";
 import Brand from "./layouts/Admin/Components/Brand.jsx";
 
+// Crud Import
+
+import UpdateBrand from "./layouts/Admin/Components/Crud/Brand/UpdateBrand.jsx";
+import DeleteBrand from "./layouts/Admin/Components/Crud/Brand/DeleteBrand.jsx";
 
 function App() {
   const location = useLocation();
-  // console.log(location);
 
   if (location.pathname.includes("admin")) {
     return (
@@ -28,11 +31,13 @@ function App() {
           <Route path="/admin" element={<Admin />}>
             <Route path="signin" element={<FormLogin />} />
             
-            <Route path="signin/dashboard" element={<Dashboard />} />
+            <Route path="signin/dashboard" element={<Dashboard />}auth={true}/>
             <Route path="signin/dashboard/products" element={<Product />} />
             <Route path="signin/dashboard/products-categories" element={<ProdCategory />} />
             <Route path="signin/dashboard/brands" element={<Brand />} />
-           
+            <Route path="signin/dashboard/brands/update/:id" element={<UpdateBrand />} />
+            <Route path="signin/dashboard/brands/delete/:id" element={<DeleteBrand />} />
+
             <Route path="signup" element={<SubscribeAdmin />} />
           </Route>
         </Routes>
