@@ -5,4 +5,4 @@ const error = (msg) => {
     return { msg };
 }
 
-export {success, error}
+export {success, error};

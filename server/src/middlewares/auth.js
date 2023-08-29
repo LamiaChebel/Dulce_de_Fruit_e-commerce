@@ -3,7 +3,9 @@ import jwt from 'jsonwebtoken';
 const { TOKEN_SECRET } = process.env;
 
 export const auth = (req, res, next) => {
-    const TOKEN = req.headers['x-access-token'];
+    console.log(req.headers);
+    const TOKEN = req.headers['authorization'].split(" ")[1];
+
     console.log(TOKEN);
     
     if(TOKEN === undefined || TOKEN === "null"){

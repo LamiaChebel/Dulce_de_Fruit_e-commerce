@@ -33,6 +33,7 @@ const signup = async (req, res) => {
     }
 }
 
+// Non terminée
 const signin = async (req, res) => {
     try {
         const {email, password} = req.body;

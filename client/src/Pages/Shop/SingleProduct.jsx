@@ -2,7 +2,6 @@ import React from "react";
 
 import { useState, useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
 
 import { getDatas } from "../../services/api";
 
@@ -10,15 +9,11 @@ import spinner from "../../assets/svg/spinner.svg";
 
 import style from "./shop.module.css";
 
-// import { addToCart, calculateTotalAmount } from "../../helpers/cart";
-// import { modifyCart } from "../../store/slices/cart";
 
 function SingleProduct() {
     
     const { id } = useParams();
 
-    // const {cart} = useSelector(state => ({...state.cart}));
-    // const dispatch = useDispatch();
 
     const [product, setProduct] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -38,13 +33,6 @@ function SingleProduct() {
         fetchProduct();
     }, [id]);
 
-    // const handleAddToCart = (e) => {
-    //     e.preventDefault();
-    //     const productToAdd = {id:product.id, ...product.productInfo[product.productInfo.findIndex(t => parseInt((t.idPackaging)) === parseInt(pkg.idPkg))]};
-    //     const newCart = addToCart( cart, productToAdd );
-    //     const totalAmount = calculateTotalAmount(newCart).toFixed(2);
-    //     dispatch(modifyCart({cart: newCart, totalAmount}));
-    // };
 
     if (isLoading)
         return (
@@ -62,24 +50,11 @@ function SingleProduct() {
                     <p>Catégorie : {product[0].categoryName}</p>
 				    <img src={product[0].img_productUrl} alt={product[0].img_productTitle} />
 
-				{/* <form>
-					<select value={pkg.idPackaging} onChange={changeHandler}>
-						{
-							product.productInfo.map(info => {
-								return (
-									<option key={info.idPackaging} value={info.idPackaging}>Pochette de {info.weight}</option>
-								)
-							})
-						}
-					</select>
-				</form> */}
 
                 <p>{product[0].ttc_price}€</p>
                 <p>{product[0].weight}</p>
                 <p>{product[0].kg_price}€</p>
 
-				{/* <button className="addToCart" onClick={handleAddToCart}>ajouter au panier</button>
-                <p>❤️ Ajouter à ma liste d'envies</p> */}
 
                 <p>{product[0].description}</p>
                 <p>{product[0].detail_desc}</p>
