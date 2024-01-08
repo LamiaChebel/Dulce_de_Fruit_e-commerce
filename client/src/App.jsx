@@ -31,7 +31,7 @@ function App() {
           <Route path="/admin" element={<Admin />}>
             <Route path="signin" element={<FormLogin />} />
             
-            <Route path="signin/dashboard" element={<Dashboard />}auth={true}/>
+            <Route path="signin/dashboard" element={<Dashboard />} auth={true}/>
             <Route path="signin/dashboard/products" element={<Product />} />
             <Route path="signin/dashboard/products-categories" element={<ProdCategory />} />
             <Route path="signin/dashboard/brands" element={<Brand />} />

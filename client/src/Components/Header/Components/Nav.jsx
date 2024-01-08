@@ -36,6 +36,10 @@ function Nav() {
     return setshowSubnav2(!showSubnav2);
   }
 
+  function closeMenu(e) {
+    return setshowNav(!showNav);
+  }
+
   return (
     <>
       <div role="navigation" className={style.navHeader}>
@@ -52,11 +56,13 @@ function Nav() {
 
         {/* menu principal */}
         <nav
-          className={`${style.desktopNav} ${showNav ? style.isActive : null}`}
+          className={`${style.desktopNav} ${showNav ? style.isActive : null }`}
         >
-          <NavLink to={"/"}>accueil</NavLink>
+          <NavLink to={"/"} onClick={closeMenu}>accueil</NavLink>
+
+          {/* Sous-menu de Note boutique */}
           <div role="menu" className={style.submenu}>
-            <NavLink to={"/notre-boutique"}>notre boutique</NavLink>
+            <NavLink to={"/notre-boutique"} onClick={closeMenu}>notre boutique</NavLink>
             <button className={style.btn} onClick={handleToggleSubnav}>
               <FontAwesomeIcon
                 icon={showSubnav ? faChevronDown : faChevronRight}
@@ -70,26 +76,26 @@ function Nav() {
             }`}
           >
             <li>
-              <NavLink to={"/notre-boutique/preparations-de-fruits"}>
+              <NavLink to={"/notre-boutique/preparations-de-fruits"} onClick={closeMenu}>
                 pr&eacute;rations 100% fruits
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/notre-boutique/purees-de-fruits"}>
+              <NavLink to={"/notre-boutique/purees-de-fruits"} onClick={closeMenu}>
                 pur&eacute;es de fruits
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/notre-boutique/purees-de-fruits-secs"}>
+              <NavLink to={"/notre-boutique/purees-de-fruits-secs"} onClick={closeMenu}>
                 pur&eacute;es de fruits secs
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/notre-boutique/smoothies"}>smoothies</NavLink>
+              <NavLink to={"/notre-boutique/smoothies"} onClick={closeMenu}>smoothies</NavLink>
             </li>
           </ul>
 
-          <NavLink to={"/nos-recettes"}>nos recettes</NavLink>
+          <NavLink to={"/nos-recettes"} onClick={closeMenu}>nos recettes</NavLink>
 
           <div role="menu" className={style.submenu}>
             <p>Dulce de Fruit</p>
@@ -106,17 +112,17 @@ function Nav() {
             }`}
           >
             <li>
-              <NavLink to={"/dulce-de-fruit/notre-histoire"}>
+              <NavLink to={"/dulce-de-fruit/notre-histoire"} onClick={closeMenu}>
                 notre histoire
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/dulce-de-fruit/nos-engagements"}>
+              <NavLink to={"/dulce-de-fruit/nos-engagements"} onClick={closeMenu}>
                 nos engagements
               </NavLink>
             </li>
           </ul>
-          <NavLink to={"/service-client/nous-contacter"}>
+          <NavLink to={"/service-client/nous-contacter"} onClick={(e) => { setshowNav(!showNav) }}>
             nous contacter
           </NavLink>
         </nav>

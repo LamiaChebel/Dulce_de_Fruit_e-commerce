@@ -68,4 +68,4 @@ async function remove(url, data) {
 //     }
 // }
 
-export { /*getAdminAuth,*/ getDatas, add, update, remove, signup, signin };
+export { /*getAdminAuth,*/ getDatas, add, update, remove/* signup, signin*/};
