@@ -1,12 +1,12 @@
 import React from "react";
 
-function CookiesCard({ props }) {
+function CookiesCard(props) {
   const { key, title, details } = props;
 
   return (
     <section key={key}>
       <h3>{title}</h3>
-      <div>{details}</div>
+      <p>{details}</p>
     </section>
   );
 }

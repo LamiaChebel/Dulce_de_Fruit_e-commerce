@@ -8,7 +8,9 @@ import style from "./index.module.css";
 function CookiesPolicy() {
   return (
     <main className={style.cookiespolicy}>
+      {/* Header */}
       <PageHeader title="politique sur les cookies" />
+      {/* différents sections */}
       <CookiesContent />
     </main>
   );
