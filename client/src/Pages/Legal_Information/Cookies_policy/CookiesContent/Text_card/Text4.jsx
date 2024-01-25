@@ -2,23 +2,22 @@ import React from "react";
 
 function Text4() {
   return (
-    <article>
-      <h3>
-        Partage de l'utilisation du terminal de l’Utilisateur ou du Membre avec
-        d'autres personnes
-      </h3>
+    <>
+      Si le terminal de l&apos;Utilisateur ou du Membre est utilis&eacute; par
+      plusieurs personnes et lorsqu&apos;un m&ecirc;me terminal dispose de
+      plusieurs logiciels de navigation, Dulce de Fruit ne peut pas
+      s&apos;assurer de mani&egrave;re certaine que les Services et
+      publicit&eacute;s destin&eacute;s au terminal correspondent bien &agrave;
+      l&apos;utilisation propre par l&apos;Utilisateur ou le Membre de ce
+      terminal et non &agrave; celle d&apos;un autre utilisateur de ce terminal.
       <p>
-        Si le terminal de l’Utilisateur ou du Membre est utilisé par plusieurs
-        personnes et lorsqu'un même terminal dispose de plusieurs logiciels de
-        navigation, Dulce de Fruit ne peut pas s’assurer de manière certaine que
-        les Services et publicités destinés au terminal correspondent bien à
-        l’utilisation propre par l’Utilisateur ou le Membre de ce terminal et
-        non à celle d'un autre utilisateur de ce terminal. Le partage avec
-        d'autres personnes de l'utilisation du terminal de l’Utilisateur ou du
-        Membre et la configuration des paramètres de leur navigateur à l'égard
-        des Cookies, relèvent de leur libre choix et de leur responsabilité.
+        Le partage avec d&apos;autres personnes de l&apos;utilisation du
+        terminal de l&apos;Utilisateur ou du Membre et la configuration des
+        param&egrave;tres de leur navigateur &agrave; l&apos;&eacute;gard des
+        Cookies, rel&egrave;vent de leur libre choix et de leur
+        responsabilit&eacute;.
       </p>
-    </article>
+    </>
   );
 }
 

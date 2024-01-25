@@ -17,32 +17,35 @@ const cookiesData = {
     },
     {
       id: 1,
-      title: "Pourquoi un cookie?",
+      title: "A quoi servent les Cookies émis sur le Site ?",
       details: <Text1 />,
     },
     {
       id: 2,
-      title: "Pourquoi un cookie?",
+      title: "Les Cookies déposés par un Tiers sur des espaces du Site",
       details: <Text2 />,
     },
     {
       id: 3,
-      title: "Pourquoi un cookie?",
+      title:
+        "Les Cookies intégrés à des applications Tierces sur le Site – Plugin réseaux sociaux",
       details: <Text3 />,
     },
     {
       id: 4,
-      title: "Pourquoi un cookie?",
+      title:
+        "Partage de l'utilisation du terminal de l’Utilisateur ou du Membre avec d'autres personnes",
       details: <Text4 />,
     },
     {
       id: 5,
-      title: "Pourquoi un cookie?",
+      title:
+        "La gestion et l’utilisation des Cookies par l’Utilisateur ou le Membre",
       details: <Text5 />,
     },
     {
       id: 6,
-      title: "Pourquoi un cookie?",
+      title: "Gestion des Cookies à partir du logiciel de navigation :",
       details: <Text6 />,
     },
   ],

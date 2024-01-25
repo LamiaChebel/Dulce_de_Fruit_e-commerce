@@ -1,21 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Text6() {
   return (
-    <article>
-      <h3>Gestion des Cookies à partir du logiciel de navigation :</h3>
+    <p>
+      L&apos;Utilisateur et le Membre peuvent configurer leur logiciel de
+      navigation de mani&egrave;re &agrave; ce que des Cookies soient
+      enregistr&eacute;s dans leur terminal ou qu&apos;ils soient
+      rejet&eacute;s, soit syst&eacute;matiquement, soit selon leur
+      &eacute;metteur.
       <p>
-        L’Utilisateur et le Membre peuvent configurer leur logiciel de
-        navigation de manière à ce que des Cookies soient enregistrés dans leur
-        terminal ou qu'ils soient rejetés, soit systématiquement, soit selon
-        leur émetteur. Pour connaître les modalités applicables à la gestion des
-        Cookies stockés dans leur navigateur, Dulce de Fruit invite
-        l’Utilisateur et le Membre à consulter le menu d'aide de leur navigateur
-        ainsi que la rubrique « Vos traces » du site de la Commission Nationale
-        de l’Informatique & des Libertés, la « CNIL »
-        (https://www.cnil.fr/vos-libertes/vos-traces/les-cookies/).{" "}
+        Pour conna&icirc;tre les modalit&eacute;s applicables &agrave; la
+        gestion des Cookies stock&eacute;s dans leur navigateur, Dulce de Fruit
+        invite l&apos;Utilisateur et le Membre &agrave; consulter le menu
+        d&apos;aide de leur navigateur ainsi que la rubrique &laquo; Vos traces
+        &raquo; du site de la Commission Nationale de l&apos;Informatique &amp;
+        des Libert&eacute;s, la &laquo; CNIL &raquo;
+        <Link to={"https://www.cnil.fr/vos-libertes/vos-traces/les-cookies/"}>
+          (https://www.cnil.fr/vos-libertes/vos-traces/les-cookies/)
+        </Link>
       </p>
-    </article>
+      .{" "}
+    </p>
   );
 }
 
