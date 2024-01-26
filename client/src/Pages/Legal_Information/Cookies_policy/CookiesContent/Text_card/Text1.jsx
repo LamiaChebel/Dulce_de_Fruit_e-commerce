@@ -3,9 +3,11 @@ import React from "react";
 function Text1() {
   return (
     <>
-      Certains Cookies sont indispensables &agrave; l&apos;utilisation du Site,
-      d&apos;autres permettent d&apos;optimiser l&apos;utilisation du Site et de
-      personnaliser les contenus affich&eacute;s.
+      <p>
+        Certains Cookies sont indispensables &agrave; l&apos;utilisation du
+        Site, d&apos;autres permettent d&apos;optimiser l&apos;utilisation du
+        Site et de personnaliser les contenus affich&eacute;s.
+      </p>
       <p>
         Ainsi les Cookies permettent :
         <ul>

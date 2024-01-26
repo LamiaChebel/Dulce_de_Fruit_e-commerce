@@ -3,9 +3,12 @@ import React from "react";
 function Text5() {
   return (
     <>
-      L&apos;ensemble des droits reconnus &agrave; l&apos;article &laquo; Quels
-      sont mes droits ? &raquo; de la Politique de confidentialit&eacute; sont
-      &eacute;galement applicables &agrave; l&apos;Utilisateur ou au Membre.
+      <p>
+        L&apos;ensemble des droits reconnus &agrave; l&apos;article &laquo;
+        Quels sont mes droits ? &raquo; de la Politique de
+        confidentialit&eacute; sont &eacute;galement applicables &agrave;
+        l&apos;Utilisateur ou au Membre.
+      </p>
       <p>
         L&apos;Utilisateur et le Membre peuvent g&eacute;rer et modifier
         &agrave; tout moment le d&eacute;&ocirc; et la lecture des Cookies sur

@@ -6,7 +6,7 @@ function CookiesCard(props) {
   return (
     <section key={key}>
       <h3>{title}</h3>
-      <p>{details}</p>
+      <>{details}</>
     </section>
   );
 }

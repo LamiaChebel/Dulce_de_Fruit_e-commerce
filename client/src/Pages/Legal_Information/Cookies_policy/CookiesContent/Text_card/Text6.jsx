@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 function Text6() {
   return (
-    <p>
-      L&apos;Utilisateur et le Membre peuvent configurer leur logiciel de
-      navigation de mani&egrave;re &agrave; ce que des Cookies soient
-      enregistr&eacute;s dans leur terminal ou qu&apos;ils soient
-      rejet&eacute;s, soit syst&eacute;matiquement, soit selon leur
-      &eacute;metteur.
+    <>
+      <p>
+        L&apos;Utilisateur et le Membre peuvent configurer leur logiciel de
+        navigation de mani&egrave;re &agrave; ce que des Cookies soient
+        enregistr&eacute;s dans leur terminal ou qu&apos;ils soient
+        rejet&eacute;s, soit syst&eacute;matiquement, soit selon leur
+        &eacute;metteur.
+      </p>
       <p>
         Pour conna&icirc;tre les modalit&eacute;s applicables &agrave; la
         gestion des Cookies stock&eacute;s dans leur navigateur, Dulce de Fruit
@@ -21,7 +23,7 @@ function Text6() {
         </Link>
       </p>
       .{" "}
-    </p>
+    </>
   );
 }
 

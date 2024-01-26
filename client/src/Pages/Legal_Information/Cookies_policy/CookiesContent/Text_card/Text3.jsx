@@ -3,15 +3,17 @@ import React from "react";
 function Text3() {
   return (
     <>
-      Le Site est susceptible d&apos;inclure sur le Site des applications
-      informatiques &eacute;manant de Tiers, qui permettent &agrave;
-      l&apos;Utilisateur et au Membre de partager des contenus du Site avec
-      d&apos;autres personnes ou de faire conna&icirc;tre &agrave; ces autres
-      personnes les consultations ou opinions de l&apos;Utilisateur et du Membre
-      concernant un contenu du Site. Tel est notamment le cas des boutons
-      &laquo; Partager &raquo;, &laquo; J&apos;aime &raquo;, issus de
-      r&eacute;seaux sociaux tels que Facebook, Twitter, Viad&eacute;o,
-      etc&hellip;
+      <p>
+        Le Site est susceptible d&apos;inclure sur le Site des applications
+        informatiques &eacute;manant de Tiers, qui permettent &agrave;
+        l&apos;Utilisateur et au Membre de partager des contenus du Site avec
+        d&apos;autres personnes ou de faire conna&icirc;tre &agrave; ces autres
+        personnes les consultations ou opinions de l&apos;Utilisateur et du
+        Membre concernant un contenu du Site. Tel est notamment le cas des
+        boutons &laquo; Partager &raquo;, &laquo; J&apos;aime &raquo;, issus de
+        r&eacute;seaux sociaux tels que Facebook, Twitter, Viad&eacute;o,
+        etc&hellip;
+      </p>
       <p>
         Le r&eacute;seau social est susceptible d&apos;identifier
         l&apos;Utilisateur et le Membre grâce &agrave; ce bouton, même s&apos;il
