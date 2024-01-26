@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "../../Components/Header/Header.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
+import Breadcrumb from "../../Components/UI/Breadcrumb/Breadcrumb.jsx";
 
 import Home from "../../Pages/Home/Home.jsx";
 import Shop from "../../Pages/Shop/Shop.jsx";
@@ -41,14 +42,19 @@ import CookiesPolicy from "../../Pages/Legal_Information/Cookies_policy/Index.js
 import SingleProduct from "../../Pages/Shop/SingleProduct.jsx";
 
 function Template() {
+  const location = useLocation();
+
   return (
     <>
       <Header />
+
+      {location.pathname === "/" ? null : <Breadcrumb />}
+
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/notre-boutique" element={<Shop />} />
-      <Route path="/notre-boutique/:id" element={<SingleProduct />} />
-      <Route path="/nos-recettes" element={<Recipe />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/notre-boutique" element={<Shop />} />
+        <Route path="/notre-boutique/:id" element={<SingleProduct />} />
+        <Route path="/nos-recettes" element={<Recipe />} />
 
         {/* Route rubrique Nos catégories de produits */}
 
@@ -112,6 +118,7 @@ function Template() {
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+
       <Footer />
     </>
   );

@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 
 function Breadcrumb() {
   const location = useLocation();
-  console.log(useLocation());
   const pathnames = location.pathname.split("/").filter((x) => x);
+  // console.log(pathnames);
 
   return (
     <nav aria-label="Breadcrumb">
