@@ -34,12 +34,12 @@ import Supplier from "../../Pages/Customer_Service/Supplier_area/Supplier.jsx";
 import Sitemap from "../../Pages/Customer_Service/Sitemap/Sitemap.jsx";
 
 // Informations Légales
-import LegalMentions from "../../Pages/Legal_Information/Legal_mentions/Index.jsx";
-import Cgv from "../../Pages/Legal_Information/CGV/Cgv.jsx";
-import Cgu from "../../Pages/Legal_Information/CGU/Cgu.jsx";
-import DataProtection from "../../Pages/Legal_Information/Data_protection/Index.jsx";
-import CookiesPolicy from "../../Pages/Legal_Information/Cookies_policy/Index.jsx";
-import SingleProduct from "../../Pages/Shop/SingleProduct.jsx";
+  import LegalMentions from "../../Pages/Legal_Information/Legal_mentions/Index.jsx";
+  import Cgv from "../../Pages/Legal_Information/CGV/Cgv.jsx";
+  import Cgu from "../../Pages/Legal_Information/CGU/Cgu.jsx";
+  import DataProtection from "../../Pages/Legal_Information/Data_protection/Index.jsx";
+  import CookiesPolicy from "../../Pages/Legal_Information/Cookies_policy/Index.jsx";
+  import SingleProduct from "../../Pages/Shop/SingleProduct.jsx";
 
 function Template() {
   const location = useLocation();
