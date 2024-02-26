@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
+//commentaires à faire + refactoriser
 function Breadcrumb() {
   //récupérer le chemin de l'URL pour retourner les pages liées à la page où se trouve l'utilisateur
   const location = useLocation();
